@@ -1,0 +1,123 @@
+//
+//  Copyright (C) 1998 E.POINT Corp.
+//
+//  E.POINT CORPORATION DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
+//  INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO
+//  EVENT SHALL E.POINT CORPORATION BE LIABLE FOR ANY SPECIAL, INDIRECT OR
+//  CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
+//  DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+//  TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+//  PERFORMANCE OF THIS SOFTWARE.
+//
+//  E_selectCV.mel version 1.0 for IRIX and NT
+//
+//  by Jeon, Gyedo / gyedo@epoint.co.kr
+//
+//  last modified in 1998.11.12
+//
+
+global proc string[] E_selectCV() {
+    global string $E_rndDeformerObjectType;
+
+    int $tokenNum;
+    int $finalIndex = 0;
+    int $a, $b, $c, $d, $j, $k;
+      
+    string $temp[];
+    string $tempLevelA[];
+    string $tempLevelAA[];
+    string $tempLevelAB[];
+ 
+    string $selectedObject;
+    string $selectedObjects[];
+    string $finalObjects[];
+     
+    $selectedObjects = `ls -sl`;
+
+    for ($selectedObject in $selectedObjects)
+    {
+	$tokenNum = `tokenize $selectedObject "][" $tempLevelA`;
+
+	if ($tokenNum == 3) // when select [][] form
+	{
+	    $tokenNum = `tokenize $tempLevelA[1] ":" $tempLevelAA`;
+	    if ($tokenNum == 2) // [a:b][c:d] or [a:b][c] form
+	    {
+		$tokenNum = `tokenize $tempLevelA[2] ":" $tempLevelAB`;
+		if ($tokenNum == 1) // [a:b][c] form
+		{
+		    $a = $tempLevelAA[0];
+		    $b = $tempLevelAA[1];
+		    for ($j = $a; $j <= $b; $j++)
+		    {
+			$finalObjects[$finalIndex] 
+			= $tempLevelA[0] + "[" + $j + "]" + "[" + $tempLevelA[2] + "]";
+			$finalIndex++;
+		    }
+		}
+		else // [a:b][c:d] form
+		{
+		    $a = $tempLevelAA[0];
+		    $b = $tempLevelAA[1];
+		    $c = $tempLevelAB[0];
+		    $d = $tempLevelAB[1];
+		    for ($j = $a; $j <= $b; $j++)
+		    {
+			for ($k = $c; $k <= $d; $k++)
+			{
+			    $finalObjects[$finalIndex] 
+			    = $tempLevelA[0] + "[" + $j + "]" + "[" + $k + "]";
+			    $finalIndex++;
+			}
+		    }
+		}
+	    }
+	    else // [a][b:c] or [a][b] form
+	    {
+		$tokenNum = `tokenize $tempLevelA[2] ":" $tempLevelAB`;
+		if ($tokenNum == 1) // [a][b] form
+		{
+		    $finalObjects[$finalIndex] 
+		    = $tempLevelA[0] + "[" + $tempLevelA[1] + "]" + "[" 
+		    + $tempLevelA[2] + "]";
+		    $finalIndex++;
+		}
+		else // [a][b:c] form
+		{
+		    $b = $tempLevelAB[0];
+		    $c = $tempLevelAB[1];
+		    for ($k = $b; $k <= $c; $k++)
+		    {
+		    $finalObjects[$finalIndex] 
+		    = $tempLevelA[0] + "[" + $tempLevelA[1] + "]" + "[" + $k + "]";
+		    $finalIndex++;
+		    }
+		}
+	    }
+	}
+	else if ($tokenNum == 2) // when select [] form
+	{
+	    $tokenNum = `tokenize $tempLevelA[1] ":" $tempLevelAA`;
+	    if ($tokenNum == 2) // [a:b] form
+	    {
+		$a = $tempLevelAA[0];
+		$b = $tempLevelAA[1];
+		for ($j = $a; $j <= $b; $j++)
+		{
+		   $finalObjects[$finalIndex] 
+		    = $tempLevelA[0] + "[" + $j + "]";
+		    $finalIndex++;
+		}
+	    }
+	    else // [a] form
+	    {
+		$finalObjects[$finalIndex] 
+		    = $tempLevelA[0] + "[" + $tempLevelAA[0] + "]";
+		    $finalIndex++;
+	    }
+		    
+	}
+    }
+    
+    return $finalObjects;
+}
