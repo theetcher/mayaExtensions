@@ -544,5 +544,113 @@ global proc shelf_FX () {
         -commandRepeatable 1
         -flat 1
     ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create Reference" 
+        -enableBackground 0
+        -align "center" 
+        -label "Create Reference" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "cRef" 
+        -overlayLabelColor 1 1 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt.fx_refSystem import fx_references\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_references)\nfx_references.createRefUI()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Activate Reference" 
+        -enableBackground 0
+        -align "center" 
+        -label "Activate Reference" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Act+" 
+        -overlayLabelColor 0 1 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt.fx_refSystem import fx_references\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_references)\nfx_references.activateRefsUI()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Deactivate Reference" 
+        -enableBackground 0
+        -align "center" 
+        -label "Deactivate Reference" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Act-" 
+        -overlayLabelColor 1 0 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt.fx_refSystem import fx_references\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_references)\nfx_references.deactivateRefsUI()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Set Reference Scene" 
+        -enableBackground 0
+        -align "center" 
+        -label "Set Reference Scene" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SetR" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt.fx_refSystem import fx_references\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_references)\nfx_references.setReferenceUI()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
 
 } 
