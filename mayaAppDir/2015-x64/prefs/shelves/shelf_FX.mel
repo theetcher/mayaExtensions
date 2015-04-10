@@ -579,6 +579,33 @@ global proc shelf_FX () {
         -manage 1
         -visible 1
         -preventOverride 0
+        -annotation "Set Reference Scene" 
+        -enableBackground 0
+        -align "center" 
+        -label "Set Reference Scene" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "setR" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt.fx_refSystem import fx_references\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_references)\nfx_references.setReferenceUI()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
         -annotation "Activate Reference" 
         -enableBackground 0
         -align "center" 
@@ -639,15 +666,15 @@ global proc shelf_FX () {
         -label "Set Reference Scene" 
         -labelOffset 0
         -font "plainLabelFont" 
-        -imageOverlayLabel "SetR" 
-        -overlayLabelColor 1 1 1 
+        -imageOverlayLabel "rOpt" 
+        -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.2 
         -image "pythonFamily.png" 
         -image1 "pythonFamily.png" 
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -command "from fxpt.fx_refSystem import fx_references\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_references)\nfx_references.setReferenceUI()" 
+        -command "from fxpt.fx_refSystem import options_dialog\nfrom fxpt.fx_utils.rreload import rreload\nrreload(options_dialog)\noptions_dialog.run()" 
         -sourceType "python" 
         -commandRepeatable 1
         -flat 1
@@ -666,15 +693,15 @@ global proc shelf_FX () {
         -label "Set Reference Scene" 
         -labelOffset 0
         -font "plainLabelFont" 
-        -imageOverlayLabel "rOpt" 
-        -overlayLabelColor 0.8 0.8 0.8 
+        -imageOverlayLabel "retg" 
+        -overlayLabelColor 0 1 1 
         -overlayLabelBackColor 0 0 0 0.2 
         -image "pythonFamily.png" 
         -image1 "pythonFamily.png" 
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -command "from fxpt.fx_refSystem import options_dialog\nfrom fxpt.fx_utils.rreload import rreload\nrreload(options_dialog)\noptions_dialog.run()" 
+        -command "from fxpt.fx_refSystem import fx_references\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_references)\nfx_references.retargetRefsUI()" 
         -sourceType "python" 
         -commandRepeatable 1
         -flat 1
