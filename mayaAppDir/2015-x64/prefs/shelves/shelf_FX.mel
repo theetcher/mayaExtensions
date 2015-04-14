@@ -786,5 +786,32 @@ global proc shelf_FX () {
         -commandRepeatable 1
         -flat 1
     ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Set Reference Scene" 
+        -enableBackground 0
+        -align "center" 
+        -label "Set Reference Scene" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "repl" 
+        -overlayLabelColor 1 0 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "#fx_collapseShelfButtons.collapse_group = references\nfrom fxpt.fx_refSystem import fx_references\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_references)\nfx_references.replaceRefUI()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
 
 } 
