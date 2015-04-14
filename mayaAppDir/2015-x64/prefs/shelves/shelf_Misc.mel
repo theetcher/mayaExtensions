@@ -132,7 +132,7 @@ global proc shelf_Misc () {
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -command "import fx_transformRandomizer\nreload(fx_transformRandomizer)\nfx_transformRandomizer.run()" 
+        -command "from fxpt import fx_transformRandomizer\nreload(fx_transformRandomizer)\nfx_transformRandomizer.run()" 
         -sourceType "python" 
         -commandRepeatable 1
         -flat 1
