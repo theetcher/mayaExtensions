@@ -1,0 +1,844 @@
+global proc shelf_FX () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "from fxpt.side_utils import fix_pycharm2maya_clipboard\nfix_pycharm2maya_clipboard.fix()\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "from fxpt.fx_outliner import fx_outliner\nfrom fxpt.fx_utils.rrel..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CLIP" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt.side_utils import fix_pycharm2maya_clipboard\nfix_pycharm2maya_clipboard.fix()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "from fxpt.fx_outliner import fx_outliner\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_outliner)\nfx_outliner.run()" 
+        -enableBackground 0
+        -align "center" 
+        -label "from fxpt.fx_outliner import fx_outliner\nfrom fxpt.fx_utils.rrel..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Out" 
+        -overlayLabelColor 1 0 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt.fx_outliner import fx_outliner\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_outliner)\nfx_outliner.run()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "from fxpt.fx_search import fx_search\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_search)\nfx_search.run()" 
+        -enableBackground 0
+        -align "center" 
+        -label "from fxpt.fx_search import fx_search\nfrom fxpt.fx_utils.rreload ..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "sear" 
+        -overlayLabelColor 0.466 0.668333 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt.fx_search import fx_search\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_search)\nfx_search.run()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "from fxpt import fx_renamer\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_renamer)\nfx_renamer.run()\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "from fxpt import fx_renamer\nfrom fxpt.fx_utils.rreload import rr..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ren" 
+        -overlayLabelColor 0 1 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt import fx_renamer\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_renamer)\nfx_renamer.run()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "from fxpt import fx_transformRandomizer\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_transformRandomizer)\nfx_transformRandomizer.run()\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "from fxpt import fx_transformRandomizer\nfrom fxpt.fx_utils.rrelo..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "rnd" 
+        -overlayLabelColor 1 0.8764 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt import fx_transform_randomizer\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_transform_randomizer)\nfx_transform_randomizer.run()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "fx_selectComponentByEdgeAngle" 
+        -enableBackground 0
+        -align "center" 
+        -label "from fxpt import fx_selectComponentByEdgeAngle\nfrom fxpt.fx_util..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "selA" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt import fx_select_component_by_edge_angle\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_select_component_by_edge_angle)\nfx_select_component_by_edge_angle.run()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "fx_growSelectionByEdgeAngle" 
+        -enableBackground 0
+        -align "center" 
+        -label "from fxpt import fx_growSelectionByEdgeAngle\nfrom fxpt.fx_utils...." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "groA" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt import fx_grow_selection_by_edge_angle\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_grow_selection_by_edge_angle)\nfx_grow_selection_by_edge_angle.run()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "from fxpt import fx_flyCamera\nfrom fxpt.fx_utils import rreload\nrreload.rreload(fx_flyCamera)\nfx_flyCamera.run()" 
+        -enableBackground 0
+        -align "center" 
+        -label "from fxpt import fx_flyCamera\nfrom fxpt.fx_utils import rreload\n..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "fly" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt import fx_fly_camera\nfrom fxpt.fx_utils import rreload\nrreload.rreload(fx_fly_camera)\nfx_fly_camera.run()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "from fxpt import fx_reorient\nfrom fxpt.fx_utils import rreload\nrreload.rreload(fx_reorient)\nfx_reorient.run()" 
+        -enableBackground 0
+        -align "center" 
+        -label "from fxpt import fx_reorient\nfrom fxpt.fx_utils import rreload\nr..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "rori" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt import fx_reorient\nfrom fxpt.fx_utils import rreload\nrreload.rreload(fx_reorient)\nfx_reorient.run()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "from fxpt.fx_prefsaver.tests import winPyQtMaya\nfrom fxpt.fx_utils.rreload import rreload\nrreload(winPyQtMaya)\nwinPyQtMaya.run()\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "from fxpt.fx_prefsaver.tests import winPyQtMaya\nfrom fxpt.fx_uti..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PQF" 
+        -overlayLabelColor 0.449 0.788416 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt.fx_prefsaver.tests import win_pyqt_maya\nfrom fxpt.fx_utils.rreload import rreload\nrreload(win_pyqt_maya)\nwin_pyqt_maya.run('SerializerFileJson')\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "from fxpt.fx_prefsaver.tests import winPyQtMaya\nfrom fxpt.fx_uti..." 
+        -enableBackground 0
+        -align "center" 
+        -label "from fxpt.fx_prefsaver.tests import winPyQtMaya\nfrom fxpt.fx_uti..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PSF" 
+        -overlayLabelColor 0.447059 0.788235 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt.fx_prefsaver.tests import win_pyside_maya\nfrom fxpt.fx_utils.rreload import rreload\nrreload(win_pyside_maya)\nwin_pyside_maya.run('SerializerFileJson')\n\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "from fxpt.fx_prefsaver.tests import winPyMel\nfrom fxpt.fx_utils.rreload import rreload\nrreload(winPyMel)\nwinPyMel.run()" 
+        -enableBackground 0
+        -align "center" 
+        -label "from fxpt.fx_prefsaver.tests import winPyMel\nfrom fxpt.fx_utils...." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PMF" 
+        -overlayLabelColor 0.447059 0.788235 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt.fx_prefsaver.tests import win_pymel\nfrom fxpt.fx_utils.rreload import rreload\nrreload(win_pymel)\nwin_pymel.run('SerializerFileJson')" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "from fxpt.fx_prefsaver.tests import winELF\nfrom fxpt.fx_utils.rreload import rreload\nrreload(winELF)\nwinELF.run()" 
+        -enableBackground 0
+        -align "center" 
+        -label "from fxpt.fx_prefsaver.tests import winELF\nfrom fxpt.fx_utils.rr..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "MayF" 
+        -overlayLabelColor 0.447059 0.788235 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt.fx_prefsaver.tests import win_maya\nfrom fxpt.fx_utils.rreload import rreload\nrreload(win_maya)\nwin_maya.run('SerializerFileJson')" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "from fxpt.fx_prefsaver.tests import winPyQtMaya\nfrom fxpt.fx_uti..." 
+        -enableBackground 0
+        -align "center" 
+        -label "from fxpt.fx_prefsaver.tests import winPyQtMaya\nfrom fxpt.fx_uti..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PQO" 
+        -overlayLabelColor 0.447059 0.788235 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt.fx_prefsaver.tests import win_pyqt_maya\nfrom fxpt.fx_utils.rreload import rreload\nrreload(win_pyqt_maya)\nwin_pyqt_maya.run('SerializerOptVar')\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "from fxpt.fx_prefsaver.tests import winPyQtMaya\nfrom fxpt.fx_uti..." 
+        -enableBackground 0
+        -align "center" 
+        -label "from fxpt.fx_prefsaver.tests import winPyQtMaya\nfrom fxpt.fx_uti..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PSO" 
+        -overlayLabelColor 0.447059 0.788235 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt.fx_prefsaver.tests import win_pyside_maya\nfrom fxpt.fx_utils.rreload import rreload\nrreload(win_pyside_maya)\nwin_pyside_maya.run('SerializerOptVar')\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "from fxpt.fx_prefsaver.tests import winPyMel\nfrom fxpt.fx_utils...." 
+        -enableBackground 0
+        -align "center" 
+        -label "from fxpt.fx_prefsaver.tests import winPyMel\nfrom fxpt.fx_utils...." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PMO" 
+        -overlayLabelColor 0.447059 0.788235 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt.fx_prefsaver.tests import win_pymel\nfrom fxpt.fx_utils.rreload import rreload\nrreload(win_pymel)\nwin_pymel.run('SerializerOptVar')" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "from fxpt.fx_prefsaver.tests import winPyMel\nfrom fxpt.fx_utils...." 
+        -enableBackground 0
+        -align "center" 
+        -label "from fxpt.fx_prefsaver.tests import winPyMel\nfrom fxpt.fx_utils...." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "MayO" 
+        -overlayLabelColor 0.447059 0.788235 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt.fx_prefsaver.tests import win_maya\nfrom fxpt.fx_utils.rreload import rreload\nrreload(win_maya)\nwin_maya.run('SerializerOptVar')" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "from fxpt.fx_textureManager import fx_textureManager\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_textureManager)\nfx_textureManager.run()" 
+        -enableBackground 0
+        -align "center" 
+        -label "from fxpt.fx_textureManager import fx_textureManager\nfrom fxpt.f..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "tex" 
+        -overlayLabelColor 1 0 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt.fx_texture_manager import fx_texture_manager\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_texture_manager)\nfx_texture_manager.run()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 15
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import fxpt.fx_collapse_shelf_buttons\nfxpt.fx_collapse_shelf_buttons..." 
+        -enableBackground 0
+        -align "center" 
+        -label "import fxpt.fx_collapse_shelf_buttons\nfxpt.fx_collapse_shelf_buttons..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "collapseBarOpened.png" 
+        -image1 "collapseBarOpened.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import fxpt.fx_collapse_shelf_buttons\nfxpt.fx_collapse_shelf_buttons.toggle('FX', 'references')" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create Reference" 
+        -enableBackground 0
+        -align "center" 
+        -label "Create Reference" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "cRef" 
+        -overlayLabelColor 1 1 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "#fx_collapse_shelf_buttons.collapse_group = references\nfrom fxpt.fx_refsystem import fx_references\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_references)\nfx_references.createRefUI()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Set Reference Scene" 
+        -enableBackground 0
+        -align "center" 
+        -label "Set Reference Scene" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "setR" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "#fx_collapse_shelf_buttons.collapse_group = references\nfrom fxpt.fx_refsystem import fx_references\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_references)\nfx_references.setReferenceUI()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Activate Reference" 
+        -enableBackground 0
+        -align "center" 
+        -label "Activate Reference" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Act+" 
+        -overlayLabelColor 0 1 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "#fx_collapse_shelf_buttons.collapse_group = references\nfrom fxpt.fx_refsystem import fx_references\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_references)\nfx_references.activateRefsUI()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Deactivate Reference" 
+        -enableBackground 0
+        -align "center" 
+        -label "Deactivate Reference" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Act-" 
+        -overlayLabelColor 1 0 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "#fx_collapse_shelf_buttons.collapse_group = references\nfrom fxpt.fx_refsystem import fx_references\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_references)\nfx_references.deactivateRefsUI()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "RefSystem Options" 
+        -enableBackground 0
+        -align "center" 
+        -label "Set Reference Scene" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "rOpt" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "#fx_collapse_shelf_buttons.collapse_group = references\nfrom fxpt.fx_refsystem import options_dialog\nfrom fxpt.fx_utils.rreload import rreload\nrreload(options_dialog)\noptions_dialog.run()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Retarget" 
+        -enableBackground 0
+        -align "center" 
+        -label "Set Reference Scene" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "retg" 
+        -overlayLabelColor 0 1 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "#fx_collapse_shelf_buttons.collapse_group = references\nfrom fxpt.fx_refsystem import fx_references\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_references)\nfx_references.retargetRefsUI()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Import Reference" 
+        -enableBackground 0
+        -align "center" 
+        -label "Set Reference Scene" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "imp" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "#fx_collapse_shelf_buttons.collapse_group = references\nfrom fxpt.fx_refsystem import fx_references\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_references)\nfx_references.importReferenceUI()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Set Reference Scene" 
+        -enableBackground 0
+        -align "center" 
+        -label "Set Reference Scene" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "repl" 
+        -overlayLabelColor 1 0 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "#fx_collapse_shelf_buttons.collapse_group = references\nfrom fxpt.fx_refsystem import fx_references\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_references)\nfx_references.replaceRefUI()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

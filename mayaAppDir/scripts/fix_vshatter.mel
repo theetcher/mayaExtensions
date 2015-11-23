@@ -1,3 +1,5 @@
+source watch.mel;
+
 proc string[] voronoiRandomLocators(string $objName, int $pCount)
 {
 	// Create group to hold locators

@@ -66,8 +66,10 @@ $RECYCLE.BIN/
 # Maya configs
 # =========================
 filePathEditorRegistryPrefs.mel
+MayaInterfaceScalingConfig
 mainWindowStates/
 MTKShelf.mel
+shelf_XGen.mel
 scriptEditorTemp/
 mayaLog
 projects/

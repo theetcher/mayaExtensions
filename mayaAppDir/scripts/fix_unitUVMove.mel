@@ -1,4 +1,4 @@
-global proc fix_unitUVMove( string $dir )
+global proc fix_unitUVMove( string $dir, float $dist )
 {
 
 	string $sel[];
@@ -14,31 +14,31 @@ global proc fix_unitUVMove( string $dir )
 		for ($tmp in $sel)
 			switch ($dir){
 			case "up":
-				polyMoveUV -ch 0 -tu 0.0 -tv 1.0 $tmp;
+				polyMoveUV -ch 0 -tu 0.0 -tv $dist $tmp;
 				break;
 			case "down": 
-				polyMoveUV -ch 0 -tu 0.0 -tv -1.0 $tmp;
+				polyMoveUV -ch 0 -tu 0.0 -tv (-$dist) $tmp;
 				break;
 			case "left": 
-				polyMoveUV -ch 0 -tu -1.0 -tv 0.0 $tmp;
+				polyMoveUV -ch 0 -tu (-$dist) -tv 0.0 $tmp;
 				break;
 			case "right":
-				polyMoveUV -ch 0 -tu 1.0 -tv 0.0 $tmp;
+				polyMoveUV -ch 0 -tu $dist -tv 0.0 $tmp;
 				break;
 			}
 	} else {
 			switch ($dir){
 			case "up":
-				polyMoveUV -ch 0 -tu 0.0 -tv 1.0;
+				polyMoveUV -ch 0 -tu 0.0 -tv $dist;
 				break;
 			case "down": 
-				polyMoveUV -ch 0 -tu 0.0 -tv -1.0;
+				polyMoveUV -ch 0 -tu 0.0 -tv (-$dist);
 				break;
 			case "left": 
-				polyMoveUV -ch 0 -tu -1.0 -tv 0.0;
+				polyMoveUV -ch 0 -tu (-$dist) -tv 0.0;
 				break;
 			case "right":
-				polyMoveUV -ch 0 -tu 1.0 -tv 0.0;
+				polyMoveUV -ch 0 -tu $dist -tv 0.0;
 				break;
 			}
 	}

@@ -1,0 +1,364 @@
+//Maya Preference 2016 (Release 1)
+//
+//
+
+nameCommand
+	-annotation "DisplayWireframeNameCommand"
+	-sourceType "mel"
+	-command ("DisplayWireframe")
+	DisplayWireframeNameCommand;
+
+nameCommand
+	-annotation "DisplayShadedNameCommand"
+	-sourceType "mel"
+	-command ("DisplayShaded")
+	DisplayShadedNameCommand;
+
+nameCommand
+	-annotation "DisplayShadedAndTexturedNameCommand"
+	-sourceType "mel"
+	-command ("DisplayShadedAndTextured")
+	DisplayShadedAndTexturedNameCommand;
+
+nameCommand
+	-annotation "DisplayLightNameCommand"
+	-sourceType "mel"
+	-command ("DisplayLight")
+	DisplayLightNameCommand;
+
+nameCommand
+	-annotation "LowQualityDisplayNameCommand"
+	-sourceType "mel"
+	-command ("LowQualityDisplay")
+	LowQualityDisplayNameCommand;
+
+nameCommand
+	-annotation "MediumQualityDisplayNameCommand"
+	-sourceType "mel"
+	-command ("MediumQualityDisplay")
+	MediumQualityDisplayNameCommand;
+
+nameCommand
+	-annotation "HighQualityDisplayNameCommand"
+	-sourceType "mel"
+	-command ("HighQualityDisplay")
+	HighQualityDisplayNameCommand;
+
+nameCommand
+	-annotation "DefaultQualityDisplayNameCommand"
+	-sourceType "mel"
+	-command ("DefaultQualityDisplay")
+	DefaultQualityDisplayNameCommand;
+
+nameCommand
+	-annotation "QualityDisplayMarkingMenuNameCommand"
+	-sourceType "mel"
+	-command ("QualityDisplayMarkingMenu")
+	QualityDisplayMarkingMenuNameCommand;
+
+nameCommand
+	-annotation "QualityDisplayMarkingMenuPopDownNameCommand"
+	-sourceType "mel"
+	-command ("QualityDisplayMarkingMenuPopDown")
+	QualityDisplayMarkingMenuPopDownNameCommand;
+
+nameCommand
+	-annotation "SelectToggleModeNameCommand"
+	-sourceType "mel"
+	-command ("SelectToggleMode")
+	SelectToggleModeNameCommand;
+
+nameCommand
+	-annotation "RenderIntoNewWindowNameCommand"
+	-sourceType "mel"
+	-command ("RenderIntoNewWindow")
+	RenderIntoNewWindowNameCommand;
+
+nameCommand
+	-annotation "RenderGlobalsWindowNameCommand"
+	-sourceType "mel"
+	-command ("RenderGlobalsWindow")
+	RenderGlobalsWindowNameCommand;
+
+nameCommand
+	-annotation "RenderViewWindowNameCommand"
+	-sourceType "mel"
+	-command ("RenderViewWindow")
+	RenderViewWindowNameCommand;
+
+nameCommand
+	-annotation "FXOutlinerNameCommand"
+	-sourceType "mel"
+	-command ("FXOutliner")
+	FXOutlinerNameCommand;
+
+nameCommand
+	-annotation "HypergraphDGWindowNameCommand"
+	-sourceType "mel"
+	-command ("HypergraphDGWindow")
+	HypergraphDGWindowNameCommand;
+
+nameCommand
+	-annotation "VisorWindowNameCommand"
+	-sourceType "mel"
+	-command ("VisorWindow")
+	VisorWindowNameCommand;
+
+nameCommand
+	-annotation "EnterEditModeNameCommand"
+	-sourceType "mel"
+	-command ("EnterEditMode")
+	EnterEditModeNameCommand;
+
+nameCommand
+	-annotation "CenterPivotNameCommand"
+	-sourceType "mel"
+	-command ("CenterPivot")
+	CenterPivotNameCommand;
+
+nameCommand
+	-annotation "SelectHierarchyNameCommand"
+	-sourceType "mel"
+	-command ("SelectHierarchy")
+	SelectHierarchyNameCommand;
+
+nameCommand
+	-annotation "HypershadeWindowNameCommand"
+	-sourceType "mel"
+	-command ("HypershadeWindow")
+	HypershadeWindowNameCommand;
+
+nameCommand
+	-annotation "TextureViewWindowNameCommand"
+	-sourceType "mel"
+	-command ("TextureViewWindow")
+	TextureViewWindowNameCommand;
+
+nameCommand
+	-annotation "GraphEditorNameCommand"
+	-sourceType "mel"
+	-command ("GraphEditor")
+	GraphEditorNameCommand;
+
+nameCommand
+	-annotation "CharacterAnimationEditorNameCommand"
+	-sourceType "mel"
+	-command ("CharacterAnimationEditor")
+	CharacterAnimationEditorNameCommand;
+
+nameCommand
+	-annotation "DopeSheetEditorNameCommand"
+	-sourceType "mel"
+	-command ("DopeSheetEditor")
+	DopeSheetEditorNameCommand;
+
+nameCommand
+	-annotation "NodeEditorWindowNameCommand"
+	-sourceType "mel"
+	-command ("NodeEditorWindow")
+	NodeEditorWindowNameCommand;
+
+nameCommand
+	-annotation "ToggleShadeOptionsWireOnShadedNameCommand"
+	-sourceType "mel"
+	-command ("ToggleShadeOptionsWireOnShaded")
+	ToggleShadeOptionsWireOnShadedNameCommand;
+
+nameCommand
+	-annotation "ToggleShadeOptionsXrayNameCommand"
+	-sourceType "mel"
+	-command ("ToggleShadeOptionsXray")
+	ToggleShadeOptionsXrayNameCommand;
+
+nameCommand
+	-annotation "UVMoveUnitUpNameCommand"
+	-sourceType "mel"
+	-command ("UVMoveUnitUp")
+	UVMoveUnitUpNameCommand;
+
+nameCommand
+	-annotation "UVMoveUnitDownNameCommand"
+	-sourceType "mel"
+	-command ("UVMoveUnitDown")
+	UVMoveUnitDownNameCommand;
+
+nameCommand
+	-annotation "UVMoveUnitLeftNameCommand"
+	-sourceType "mel"
+	-command ("UVMoveUnitLeft")
+	UVMoveUnitLeftNameCommand;
+
+nameCommand
+	-annotation "UVMoveUnitRightNameCommand"
+	-sourceType "mel"
+	-command ("UVMoveUnitRight")
+	UVMoveUnitRightNameCommand;
+
+nameCommand
+	-annotation "HideSelectedObjectsNameCommand"
+	-sourceType "mel"
+	-command ("HideSelectedObjects")
+	HideSelectedObjectsNameCommand;
+
+nameCommand
+	-annotation "ShowAllNameCommand"
+	-sourceType "mel"
+	-command ("ShowAll")
+	ShowAllNameCommand;
+
+nameCommand
+	-annotation "ToggleIsolateSelectNameCommand"
+	-sourceType "mel"
+	-command ("ToggleIsolateSelect")
+	ToggleIsolateSelectNameCommand;
+
+nameCommand
+	-annotation "DeleteHistoryNameCommand"
+	-sourceType "mel"
+	-command ("DeleteHistory")
+	DeleteHistoryNameCommand;
+
+nameCommand
+	-annotation "RepeatLastNameCommand"
+	-sourceType "mel"
+	-command ("RepeatLast")
+	RepeatLastNameCommand;
+
+nameCommand
+	-annotation "SelectionMaskEdgeNameCommand"
+	-sourceType "mel"
+	-command ("SelectionMaskEdge")
+	SelectionMaskEdgeNameCommand;
+
+nameCommand
+	-annotation "SelectionMaskFaceNameCommand"
+	-sourceType "mel"
+	-command ("SelectionMaskFace")
+	SelectionMaskFaceNameCommand;
+
+nameCommand
+	-annotation "SelectionMaskHullNameCommand"
+	-sourceType "mel"
+	-command ("SelectionMaskHull")
+	SelectionMaskHullNameCommand;
+
+nameCommand
+	-annotation "SelectionMaskPointsNameCommand"
+	-sourceType "mel"
+	-command ("SelectionMaskPoints")
+	SelectionMaskPointsNameCommand;
+
+nameCommand
+	-annotation "SelectionMaskUVNameCommand"
+	-sourceType "mel"
+	-command ("SelectionMaskUV")
+	SelectionMaskUVNameCommand;
+
+nameCommand
+	-annotation "SculptReferenceVectorMarkingMenuPressNameCommand"
+	-sourceType "mel"
+	-command ("SculptReferenceVectorMarkingMenuPress")
+	SculptReferenceVectorMarkingMenuPressNameCommand;
+
+nameCommand
+	-annotation "SculptReferenceVectorMarkingMenuReleaseNameCommand"
+	-sourceType "mel"
+	-command ("SculptReferenceVectorMarkingMenuRelease")
+	SculptReferenceVectorMarkingMenuReleaseNameCommand;
+
+nameCommand
+	-annotation "InsertKeyToolActivateNameCommand"
+	-sourceType "mel"
+	-command ("InsertKeyToolActivate")
+	InsertKeyToolActivateNameCommand;
+
+nameCommand
+	-annotation "InsertKeyToolDeactivateNameCommand"
+	-sourceType "mel"
+	-command ("InsertKeyToolDeactivate")
+	InsertKeyToolDeactivateNameCommand;
+
+nameCommand
+	-annotation "ModifyOpacityPressNameCommand"
+	-sourceType "mel"
+	-command ("ModifyOpacityPress")
+	ModifyOpacityPressNameCommand;
+
+nameCommand
+	-annotation "ModifyOpacityReleaseNameCommand"
+	-sourceType "mel"
+	-command ("ModifyOpacityRelease")
+	ModifyOpacityReleaseNameCommand;
+
+nameCommand
+	-annotation "SelectEdgeRingSpNameCommand"
+	-sourceType "mel"
+	-command ("SelectEdgeRingSp")
+	SelectEdgeRingSpNameCommand;
+
+nameCommand
+	-annotation "SelectContiguousEdgesNameCommand"
+	-sourceType "mel"
+	-command ("SelectContiguousEdges")
+	SelectContiguousEdgesNameCommand;
+
+nameCommand
+	-annotation "SelectEdgeLoopSpNameCommand"
+	-sourceType "mel"
+	-command ("SelectEdgeLoopSp")
+	SelectEdgeLoopSpNameCommand;
+
+nameCommand
+	-annotation "PolyCopyPasteCopyNameCommand"
+	-sourceType "mel"
+	-command ("PCPcopy")
+	PolyCopyPasteCopyNameCommand;
+
+nameCommand
+	-annotation "PCPpasteUVNameCommand"
+	-sourceType "mel"
+	-command ("PCPpasteUV")
+	PCPpasteUVNameCommand;
+
+nameCommand
+	-annotation "PCPpasteShaderNameCommand"
+	-sourceType "mel"
+	-command ("PCPpasteShader")
+	PCPpasteShaderNameCommand;
+
+nameCommand
+	-annotation "PolyModelingMain_PressNameCommand"
+	-sourceType "mel"
+	-command ("PolyModelingMain_Press")
+	PolyModelingMain_PressNameCommand;
+
+nameCommand
+	-annotation "PolyModelingMain_ReleaseNameCommand"
+	-sourceType "mel"
+	-command ("PolyModelingMain_Release")
+	PolyModelingMain_ReleaseNameCommand;
+
+nameCommand
+	-annotation "PolyConversion_PressNameCommand"
+	-sourceType "mel"
+	-command ("PolyConversion_Press")
+	PolyConversion_PressNameCommand;
+
+nameCommand
+	-annotation "PolyConversion_ReleaseNameCommand"
+	-sourceType "mel"
+	-command ("PolyConversion_Release")
+	PolyConversion_ReleaseNameCommand;
+
+nameCommand
+	-annotation "PolyMisc_PressNameCommand"
+	-sourceType "mel"
+	-command ("PolyMisc_Press")
+	PolyMisc_PressNameCommand;
+
+nameCommand
+	-annotation "PolyMisc_ReleaseNameCommand"
+	-sourceType "mel"
+	-command ("PolyMisc_Release")
+	PolyMisc_ReleaseNameCommand;
+
