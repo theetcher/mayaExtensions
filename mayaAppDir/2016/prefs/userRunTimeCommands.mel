@@ -170,3 +170,11 @@ runTimeCommand
 	-command ("if (`popupMenu -exists tempMM`) { deleteUI tempMM; }")
 	PolyMisc_Release;
 
+runTimeCommand
+	-annotation "Show Spark"
+	-category "Custom Scripts"
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from fxpt.fx_spark import fx_spark\nfx_spark.run()")
+	Spark;
+

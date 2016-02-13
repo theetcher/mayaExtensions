@@ -362,3 +362,9 @@ nameCommand
 	-command ("PolyMisc_Release")
 	PolyMisc_ReleaseNameCommand;
 
+nameCommand
+	-annotation "SparkNameCommand"
+	-sourceType "mel"
+	-command ("Spark")
+	SparkNameCommand;
+
