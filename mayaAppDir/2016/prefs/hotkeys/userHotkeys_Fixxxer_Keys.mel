@@ -12,7 +12,7 @@ hotkeySet -source "Maya_Default" -current Fixxxer_Keys;
 hotkey -keyShortcut "Up" -ctl -name ("UVMoveUnitUpNameCommand");
 hotkey -keyShortcut "3" -name ("SelectionMaskFaceNameCommand");
 hotkey -keyShortcut "c" -alt -name ("ToggleShadeOptionsWireOnShadedNameCommand");
-hotkey -keyShortcut "f" -ctl -name ("");
+hotkey -keyShortcut "f" -ctl -name ("ShadingGroupAttributeEditorNameCommand");
 hotkey -keyShortcut "F8" -name ("SelectToggleModeNameCommand");
 hotkey -keyShortcut "q" -ctl -name ("");
 hotkey -keyShortcut "1" -alt -name ("SelectionMaskUVNameCommand");

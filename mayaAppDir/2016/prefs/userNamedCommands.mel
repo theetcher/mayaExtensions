@@ -368,3 +368,9 @@ nameCommand
 	-command ("Spark")
 	SparkNameCommand;
 
+nameCommand
+	-annotation "ShadingGroupAttributeEditorNameCommand"
+	-sourceType "mel"
+	-command ("ShadingGroupAttributeEditor")
+	ShadingGroupAttributeEditorNameCommand;
+
