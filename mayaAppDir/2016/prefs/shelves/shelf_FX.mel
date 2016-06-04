@@ -655,6 +655,37 @@ global proc shelf_FX () {
     shelfButton
         -enableCommandRepeat 1
         -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "from fxpt.fx_smart_normal import fx_smart_normal\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_smart_normal)\nfx_smart_normal.run()\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "from fxpt.fx_smart_normal import fx_smart_normal\nfrom fxpt.fx_ut..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "smNrm" 
+        -overlayLabelColor 0 1 1 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from fxpt.fx_smart_normal import fx_smart_normal\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_smart_normal)\nfx_smart_normal.run()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
         -width 15
         -height 35
         -manage 1
