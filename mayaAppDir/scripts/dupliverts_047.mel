@@ -1,0 +1,253 @@
+/////////////////////////////////
+//                             //
+//    DUPLIVERTS SCRIPT v0.47  //
+//                             //
+/////////////////////////////////
+//
+// DESCRIPTION:
+//
+// This script will duplicate a selected object or objects, and automatically move them to    
+// a second specified target object's vertices. It is based on the idea of the "dupliverts" tool     
+// in Blender 3D, though no code was taken from that program. Also, instead of just creating  
+// instances of the object like Blender does, this script actually creates and groups an      
+// entire set of duplicated objects!
+//
+// Features include:
+// - ability for multiple "child" objects per parent object
+// - support for randomization of scale, rotation, and translation (including ability to limit 
+//   randomization of certain translation axies)
+// - ability to specify percent coverage of duplication onto "parent" object's vertices
+// - ability to align specified axies of child object to "parent" object's normals
+// - ability to name output objects and group
+// - poly or nurbs objects can be duplicated
+//
+// TO USE:
+//
+//    - Select object to be duplicated (poly or nurbs). If more than one, the script will
+//      randomly assign a different on to each vertex.
+//    - Select the target object LAST (MUST be poly object)
+//    - Run the script, specify desired values, and hit "Dupliverts"
+//    - All objects should have the same origin point to work correctly
+//
+// THANKS:
+// 
+// Thanks to Andrew Martin for help on getting some of the coding issues worked out for a
+// beginning MEL script writer; also, thanks to Malcolm Kesson for his great explanation
+// of aligning axies to a vector, which you can find at http://www.fundza.com/mel/axis_to_vector/align_axis_to_vector.html.
+// Thanks to v__m for helping troubleshoot the "invalid column width" error, as I couldn't for
+// the life of me replicate it on any of my computers. :)
+//
+// Also, sorry for the poor coding protocol; I'm pretty new to this stuff and I'm sure
+// some of it is not written the best. As always, feel free to e-mail me suggestions
+// at jessenelson@huntington.edu or post on my blog at http://nelsonjesse.blogspot.com.
+//
+// LIABILITY:
+// 
+// I am NOT liable for any damage this script may cause to your computer or files, including crashing
+// Maya, erasing saved files, etc. However, it has worked fine for me so for. :)
+//
+//////////////////////////////////////////////////////////////////////////////
+//
+// START OF SCRIPT:
+//
+// procedure to convert vector to rotation
+		proc float[] aimY(vector $vec)
+			{
+			float $out[2];
+			float $xAngle, $zAngle, $xyLength, $vecLength;
+			  
+			$xyLength = sqrt(($vec.x) * ($vec.x) +
+					  ($vec.y) * ($vec.y));
+			$vecLength = sqrt(($vec.x) * ($vec.x) +
+					   ($vec.y) * ($vec.y) + 
+					   ($vec.z) * ($vec.z));
+			  
+			// $xyLength will be zero when $vec is pointing
+			// along the +z or -z axis
+			if($xyLength == 0)
+			    $zAngle = ($vec.x) > 0 ? deg_to_rad(90) : deg_to_rad(-90);
+			else
+			    $zAngle = acos(($vec.y)/$xyLength);
+			  
+			$xAngle = acos($xyLength/$vecLength);
+			  
+			$xAngle = ($vec.z) > 0 ? $xAngle : -$xAngle;
+			$out[0] = rad_to_deg($xAngle);
+			  
+			$zAngle = ($vec.x) > 0 ? -$zAngle : $zAngle;
+			$out[1] = rad_to_deg($zAngle);
+			return $out;
+			}
+
+// procedure to duplicate and align one object to another object's vertices
+global proc dupliverts (int $objAlign, float $randObjScale, float $randObjRot, float $randObjPos, float $randObjCov, int $xRestrict, int $yRestrict, int $zRestrict, string $usrObjName){
+
+    //finds number of objects and verts, and stores the data
+	string $objName[] = `ls -sl`;
+	int $numObj = size($objName);
+	select $objName[$numObj-1];
+	int $numVerts[] = `polyEvaluate -v`;
+	
+	//group for storing duplicated objects
+	group -em -w -n ($usrObjName + "GRP");
+
+		// determines if there needs to be a temp object duplicated, and if so, does it
+		if ($objAlign > 0) {
+		duplicate -n "tempObject" $objName[$numObj-1];
+		polyAverageNormal -prenormalize 0 -allowZeroNormal 0 -postnormalize 0 -distance 0.1 -replaceNormalXYZ 1 0 0 tempObject;
+
+		}
+    
+        // randomizes the list of vertices
+        int $ar[];        
+        int $x;
+        int $temp;        
+              		
+        for ($mix = 0; $mix <= ($numVerts[0] - 1); $mix++) {				    
+		    $ar[$mix] = $mix;
+		}
+		
+		for ($inc = 0; $inc <= ($numVerts[0] - 1); $inc++) {       
+            $x = `rand 0 $numVerts[0]`;
+            $temp = $ar[$x];
+            $ar[$x] = $ar[$inc];
+            $ar[$inc] = $temp;
+		}
+		
+		//gets percent coverage specified by user
+		float $covPF = ($numVerts[0] * $randObjCov)/100;
+		int $covPI = `floor ($covPF + 0.5)`;
+        int $whichBall;
+    	
+    	//values for random position movement
+        float $amountPosX;
+    	float $amountPosY;
+    	float $amountPosZ;
+    	
+    	// loop for duplicating the object onto the verts
+		for ($i = 0; $i <= ($covPI - 1); $i++) {
+	    
+	        $whichBall = `rand 0 ($numObj-1)`;
+    		float $vtxPos[] = `pointPosition ($objName[$numObj-1] + ".vtx[" + $ar[$i] + "]")`;
+    		duplicate -n ("ball"+ $i) $objName[$whichBall];
+    	
+    		//random scale of object
+    		float $amountScale = `rand (1-$randObjScale) (1+$randObjScale)`;
+    		scale -r $amountScale $amountScale $amountScale ("ball"+ $i);
+    		move $vtxPos[0] $vtxPos[1] $vtxPos[2] ("ball" + $i);
+                
+                //determines which axis to align object to
+    			if ($objAlign > 0) {
+    			
+    				switch ($objAlign)
+    				{
+    				case 1:
+    					float $normXYZ[] = `polyNormalPerVertex -q -xyz ("tempObject.vtx[" + $ar[$i] + "]")`;
+    					vector $v = <<$normXYZ[0],$normXYZ[1],$normXYZ[2]>>;
+    					float $a[] = aimY($v);
+    					rotate $a[0] 0  $a[1] ("ball" + $i);
+    					rotate -r -os 0 0 90 ("ball" + $i);
+    					break;
+    
+    				case 2:
+    					float $normXYZ[] = `polyNormalPerVertex -q -xyz ("tempObject.vtx[" + $ar[$i] + "]")`;
+    					vector $v = <<$normXYZ[0],$normXYZ[1],$normXYZ[2]>>;
+    					float $a[] = aimY($v);
+    					rotate $a[0] 0  $a[1] ("ball" + $i);
+    					break;
+    
+    				case 3:
+    					float $normXYZ[] = `polyNormalPerVertex -q -xyz ("tempObject.vtx[" + $ar[$i] + "]")`;
+    					vector $v = <<$normXYZ[0],$normXYZ[1],$normXYZ[2]>>;
+    					float $a[] = aimY($v);
+    					rotate $a[0] 0  $a[1] ("ball" + $i);
+    					rotate -r -os -90 0 0 ("ball" + $i);
+    					break;
+    
+    				default:
+    				break;
+    				} 
+			    }
+    		
+		    //random translation of object
+    		if ($xRestrict == 1) {
+    		    $amountPosX = `rand (0-$randObjPos) $randObjPos`;
+    		} else {
+    		    $amountPosX = 0;
+    		}
+    		    
+        	if ($yRestrict == 1) {
+    		    $amountPosY = `rand (0-$randObjPos) $randObjPos`;
+    		} else {
+    		    $amountPosY = 0;
+    		}
+    		    
+        	if ($zRestrict == 1) {
+    		    $amountPosZ = `rand (0-$randObjPos) $randObjPos`;
+    		} else {
+    		    $amountPosZ = 0;
+    		} 
+    		
+    		move -r -os $amountPosX $amountPosY $amountPosZ ("ball" + $i);
+    		
+    		//random rotation of object
+    		rotate -r -os (`rand (0-$randObjRot) ($randObjRot)`) (`rand (0-$randObjRot) ($randObjRot)`) (`rand (0-$randObjRot) ($randObjRot)`) ("ball" + $i);
+		    
+		}
+	
+	//renames object to user defined name and parents to the new group	
+	for ($name = 0; $name <= ($covPI - 1); $name++) {
+	rename ("ball"+ $name) ($usrObjName + $name);
+	parent ($usrObjName + $name) ($usrObjName + "GRP");
+	}
+    
+    //deletes temp object used to get normal data
+	if ($objAlign > 0) {
+	delete tempObject;
+	}
+}
+
+// creates window with controls for user
+if (`window -exists ctrlWindow`) deleteUI ctrlWindow;
+if (`windowPref -exists ctrlWindow`) windowPref -remove ctrlWindow;
+window -title "Dupliverts" -widthHeight 345 275 ctrlWindow;
+    columnLayout -columnAttach "both" 5 -rowSpacing 5 -columnWidth 265;
+        floatSliderGrp -cw3 90 1 75 -label "Percent Coverage" -field true -min -0 -max 100 -ss .01 -v 100 -columnAlign 1 "right" randCov;	
+    	floatSliderGrp -cw3 90 1 1 -label "Size Jitter" -field true -min -0 -max 1 -ss .01 -fmx 100 -columnAlign 1 "right" randSize;
+        floatSliderGrp -cw3 90 1 1 -label "Rotation Jitter" -field true -min -0 -max 10 -ss .01 -fmx 100 -columnAlign 1 "right" randRot;        
+        setParent ..;
+    
+    rowLayout  -numberOfColumns 4 -width 350;
+        floatSliderGrp -cw3 90 1 75 -label "Position Jitter" -field true -min -0 -max 1 -ss .01 -fmx 100 -columnAlign 1 "right" randPos;    
+        checkBox -l "X" -v 1 xRestrPos;
+        checkBox -l "Y" -v 1 yRestrPos;
+        checkBox -l "Z" -v 1 zRestrPos;	
+    	setParent ..;
+    
+    columnLayout -columnAttach "both" 5 -rowSpacing 5 -columnWidth 150;	
+        separator -w 50;
+        text -label "Object output name" -align "center";	
+    	textField -w 10 -tx "obj" objName;
+        separator -w 50;        
+        setParent ..;
+    	
+    columnLayout -columnAttach "both" 5 -rowSpacing 5 -columnWidth 255;	
+    	text -label "Which axis would you like to align?" -align "left";
+    	setParent ..;
+    	
+    	int $alignVal;
+    	
+    rowLayout  -numberOfColumns 4 -width 350;	
+        radioCollection;
+        radioButton -sl -l "No Align" -onc "$alignVal = 0" noAlign;
+        radioButton -l "X Axis" -onc "$alignVal = 1" xAlign;
+        radioButton -l "Y Axis" -onc "$alignVal = 2" yAlign;
+        radioButton -l "Z Axis" -onc "$alignVal = 3" zAlign; 	 
+        setParent ..;
+        	
+    columnLayout -columnAttach "both" 5 -rowSpacing 5 -columnWidth 255;
+        button -label "DUPLIVERTS" -command "dupliverts ($alignVal, `floatSliderGrp -q -v randSize`, `floatSliderGrp -q -v randRot`, `floatSliderGrp -q -v randPos`, `floatSliderGrp -q -v randCov`, `checkBox -q -v xRestrPos`, `checkBox -q -v yRestrPos`, `checkBox -q -v zRestrPos`, `textField -q -tx objName`)";
+        setParent ..;
+        
+setParent ..;
+showWindow ctrlWindow;

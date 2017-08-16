@@ -1,0 +1,95 @@
+//Maya Preference 2017 (Release 1)
+//
+//
+
+//
+// The hotkey set
+//
+hotkeySet -source "Maya_Default" -current Fixxxer_Keys;
+//
+// The hotkey contexts and hotkeys
+//
+hotkey -keyShortcut "d" -name ("PolyModelingMain_PressNameCommand");
+hotkey -keyShortcut "d" -releaseName ("PolyModelingMain_ReleaseNameCommand");
+hotkey -keyShortcut "a" -releaseName ("PolyConversion_ReleaseNameCommand");
+hotkey -keyShortcut "g" -sht -name ("");
+hotkey -keyShortcut "a" -name ("PolyConversion_PressNameCommand");
+hotkey -keyShortcut "Ins" -name ("");
+hotkey -keyShortcut "c" -ctl -name ("PolyCopyPasteCopyNameCommand");
+hotkey -keyShortcut "Right" -ctl -name ("UVMoveUnitRightNameCommand");
+hotkey -keyShortcut "F9" -alt -name ("RenderViewWindowNameCommand");
+hotkey -keyShortcut "c" -alt -name ("ToggleShadeOptionsWireOnShadedNameCommand");
+hotkey -keyShortcut "x" -alt -name ("ToggleShadeOptionsXrayNameCommand");
+hotkey -keyShortcut "F10" -alt -name ("HypergraphDGWindowNameCommand");
+hotkey -keyShortcut "3" -name ("SelectionMaskFaceNameCommand");
+hotkey -keyShortcut "2" -name ("SelectionMaskEdgeNameCommand");
+hotkey -keyShortcut "3" -alt -name ("SelectionMaskHullNameCommand");
+hotkey -keyShortcut "End" -name ("SelectHierarchyNameCommand");
+hotkey -keyShortcut "1" -name ("SelectionMaskPointsNameCommand");
+hotkey -keyShortcut "6" -name ("");
+hotkey -keyShortcut "1" -ctl -name ("");
+hotkey -keyShortcut "d" -alt -sht -name ("");
+hotkey -keyShortcut "6" -alt -name ("DisplayShadedAndTexturedNameCommand");
+hotkey -keyShortcut "h" -name ("HideSelectedObjectsNameCommand");
+hotkey -keyShortcut "F9" -name ("RenderIntoNewWindowNameCommand");
+hotkey -keyShortcut "h" -ctl -name ("ToggleIsolateSelectNameCommand");
+hotkey -keyShortcut "F1" -name ("SelectToggleModeNameCommand");
+hotkey -keyShortcut "1" -alt -name ("SelectionMaskUVNameCommand");
+hotkey -keyShortcut "F9" -ctl -name ("RenderGlobalsWindowNameCommand");
+hotkey -keyShortcut "Down" -ctl -name ("UVMoveUnitDownNameCommand");
+hotkey -keyShortcut "F10" -name ("FXOutlinerNameCommand");
+hotkey -keyShortcut "z" -name ("");
+hotkey -keyShortcut "F10" -ctl -name ("VisorWindowNameCommand");
+hotkey -keyShortcut "4" -name ("");
+hotkey -keyShortcut "F12" -ctl -name ("CharacterAnimationEditorNameCommand");
+hotkey -keyShortcut "4" -alt -name ("DisplayWireframeNameCommand");
+hotkey -keyShortcut "z" -alt -name ("EnterEditModeNameCommand");
+hotkey -keyShortcut "q" -ctl -name ("");
+hotkey -keyShortcut "g" -name ("");
+hotkey -keyShortcut "7" -name ("");
+hotkey -keyShortcut "7" -alt -name ("DisplayLightNameCommand");
+hotkey -keyShortcut "i" -alt -name ("DeleteHistoryNameCommand");
+hotkey -keyShortcut "0" -name ("QualityDisplayMarkingMenuNameCommand");
+hotkey -keyShortcut "0" -releaseName ("QualityDisplayMarkingMenuPopDownNameCommand");
+hotkey -keyShortcut "F8" -name ("SelectToggleModeNameCommand");
+hotkey -keyShortcut "F11" -name ("HypershadeWindowNameCommand");
+hotkey -keyShortcut "v" -sht -releaseName ("");
+hotkey -keyShortcut "v" -sht -name ("PCPpasteShaderNameCommand");
+hotkey -keyShortcut "F11" -ctl -name ("TextureViewWindowNameCommand");
+hotkey -keyShortcut "h" -ctl -alt -name ("ShowAllNameCommand");
+hotkey -keyShortcut "e" -ctl -name ("SelectEdgeRingSpNameCommand");
+hotkey -keyShortcut "e" -alt -name ("SelectContiguousEdgesNameCommand");
+hotkey -keyShortcut "F12" -alt -name ("DopeSheetEditorNameCommand");
+hotkey -keyShortcut "Up" -ctl -name ("UVMoveUnitUpNameCommand");
+hotkey -keyShortcut "8" -name ("DefaultQualityDisplayNameCommand");
+hotkey -keyShortcut "9" -name ("MediumQualityDisplayNameCommand");
+hotkey -keyShortcut "F10" -sht -name ("NodeEditorWindowNameCommand");
+hotkey -keyShortcut "Left" -ctl -name ("UVMoveUnitLeftNameCommand");
+hotkey -keyShortcut "f" -ctl -name ("ShadingGroupAttributeEditorNameCommand");
+hotkey -keyShortcut "F12" -name ("GraphEditorNameCommand");
+hotkey -keyShortcut "s" -name ("PolyMisc_PressNameCommand");
+hotkey -keyShortcut "v" -ctl -name ("PCPpasteUVNameCommand");
+hotkey -keyShortcut "s" -releaseName ("PolyMisc_ReleaseNameCommand");
+hotkey -keyShortcut "Home" -name ("CenterPivotNameCommand");
+hotkey -keyShortcut "F2" -name ("SparkNameCommand");
+hotkey -keyShortcut "5" -name ("");
+hotkey -keyShortcut "e" -ctl -alt -name ("SelectEdgeLoopSpNameCommand");
+hotkey -keyShortcut "5" -alt -name ("DisplayShadedNameCommand");
+hotkey -keyShortcut "`" -name ("RepeatLastNameCommand");
+hotkey -keyShortcut "`" -releaseName ("");
+hotkeyCtx -type "Editor" -addClient "outlinerPanel";
+hotkeyCtx -type "Editor" -addClient "posePanel";
+hotkeyCtx -type "Editor" -addClient "cteEditor";
+hotkeyCtx -type "Editor" -addClient "graphEditor";
+hotkeyCtx -type "Editor" -addClient "hyperShadePanel";
+hotkeyCtx -type "Editor" -addClient "hyperGraphPanel";
+hotkeyCtx -type "Editor" -addClient "nodeEditorPanel";
+hotkeyCtx -type "Editor" -addClient "timeEditorPanel";
+hotkeyCtx -type "Editor" -addClient "shapePanel";
+hotkeyCtx -type "Editor" -addClient "profilerPanel";
+hotkeyCtx -type "Editor" -addClient "polyTexturePlacementPanel";
+hotkeyCtx -type "Tool" -addClient "texSculptCacheContext";
+hotkeyCtx -type "Tool" -addClient "SymmetrizeUVBrush";
+hotkeyCtx -type "Tool" -addClient "Unfold3DBrush";
+hotkeyCtx -type "Tool" -addClient "texCutContext";
+hotkeyCtx -type "Tool" -addClient "sculptMeshCache";

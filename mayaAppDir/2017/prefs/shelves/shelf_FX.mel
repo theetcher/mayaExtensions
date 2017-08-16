@@ -14,6 +14,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "import fxpt.fx_collapse_shelf_buttons\nfxpt.fx_collapse_shelf_buttons..." 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "FX Refsystem" 
         -labelOffset 0
@@ -44,6 +45,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "Create Reference" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "Create Reference" 
         -labelOffset 0
@@ -75,6 +77,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "Set Reference Scene" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "Set Reference Scene" 
         -labelOffset 0
@@ -106,6 +109,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "Activate Reference" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "Activate Reference" 
         -labelOffset 0
@@ -137,6 +141,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "Deactivate Reference" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "Deactivate Reference" 
         -labelOffset 0
@@ -168,6 +173,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "Retarget" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "Retarget" 
         -labelOffset 0
@@ -199,6 +205,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "Import Reference" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "Import Reference" 
         -labelOffset 0
@@ -230,6 +237,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "Replace with Reference" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "Replace with Reference" 
         -labelOffset 0
@@ -261,6 +269,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "RefSystem Options" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "RefSystem Options" 
         -labelOffset 0
@@ -292,6 +301,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "FX Misc Tools" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "Misc" 
         -labelOffset 0
@@ -321,6 +331,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "FX Outliner" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "FX Outliner" 
         -labelOffset 0
@@ -352,6 +363,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "FX Search" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "FX Search" 
         -labelOffset 0
@@ -383,6 +395,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "FX Renamer" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "FX Renamer" 
         -labelOffset 0
@@ -414,6 +427,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "FX Transform Randomizer" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "FX Transform Randomizer" 
         -labelOffset 0
@@ -445,6 +459,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "FX Select Component by Edge Angle" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "FX Select Component by Edge Angle" 
         -labelOffset 0
@@ -476,6 +491,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "FX Grow Selection by Edge Angle" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "FX Grow Selection by Edge Angle" 
         -labelOffset 0
@@ -507,6 +523,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "FX Fly Camera" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "FX Fly Camera" 
         -labelOffset 0
@@ -538,6 +555,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "FX Reorient" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "FX Reorient" 
         -labelOffset 0
@@ -569,6 +587,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "FX Texture Manager" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "FX Texture Manager" 
         -labelOffset 0
@@ -600,6 +619,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "Set Locator Local Scale 10" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "Set Locator Local Scale 10" 
         -labelOffset 0
@@ -631,6 +651,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "from fxpt.fx_spark import fx_spark\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_spark)\nfx_spark.run()" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "from fxpt.fx_spark import fx_spark\nfrom fxpt.fx_utils.rreload im..." 
         -labelOffset 0
@@ -662,6 +683,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "from fxpt.fx_smart_normal import fx_smart_normal\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_smart_normal)\nfx_smart_normal.run()\n" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "from fxpt.fx_smart_normal import fx_smart_normal\nfrom fxpt.fx_ut..." 
         -labelOffset 0
@@ -693,6 +715,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "from fxpt import fx_locators_to_flow_map\nfrom fxpt.fx_utils.rreload import rreload\nrreload(fx_locators_to_flow_map)\nfx_locators_to_flow_map.run()\n\n" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "from fxpt import fx_locators_to_flow_map\nfrom fxpt.fx_utils.rrel..." 
         -labelOffset 0
@@ -724,6 +747,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "FX Refsystem" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "FX Prefsaver Tests" 
         -labelOffset 0
@@ -754,6 +778,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "PyQt JSON" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "PyQt JSON" 
         -labelOffset 0
@@ -785,6 +810,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "PySide JSON" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "PySide JSON" 
         -labelOffset 0
@@ -814,8 +840,41 @@ global proc shelf_FX () {
         -manage 1
         -visible 1
         -preventOverride 0
+        -annotation "PySide JSON" 
+        -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "PySide JSON" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PS2F" 
+        -overlayLabelColor 0.447059 0.788235 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "#fx_collapse_shelf_buttons.collapse_group = prefsaver_tests\nfrom fxpt.fx_prefsaver.tests import win_pyside2_maya\nfrom fxpt.fx_utils.rreload import rreload\nrreload(win_pyside2_maya)\nwin_pyside2_maya.run('SerializerFileJson')\n\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
         -annotation "PyMEL JSON" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "PyMEL JSON" 
         -labelOffset 0
@@ -847,6 +906,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "ELF JSON" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "ELF JSON" 
         -labelOffset 0
@@ -878,6 +938,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "PyQt OptVar" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "PyQt OptVar" 
         -labelOffset 0
@@ -909,6 +970,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "PySide OptVar" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "PySide OptVar" 
         -labelOffset 0
@@ -940,6 +1002,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "PyMEL OptVar" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "PyMEL OptVar" 
         -labelOffset 0
@@ -971,6 +1034,7 @@ global proc shelf_FX () {
         -preventOverride 0
         -annotation "ELF OptVar" 
         -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
         -label "ELF OptVar" 
         -labelOffset 0
@@ -988,6 +1052,38 @@ global proc shelf_FX () {
         -marginWidth 1
         -marginHeight 1
         -command "#fx_collapse_shelf_buttons.collapse_group = prefsaver_tests\nfrom fxpt.fx_prefsaver.tests import win_maya\nfrom fxpt.fx_utils.rreload import rreload\nrreload(win_maya)\nwin_maya.run('SerializerOptVar')" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import sys\nscriptDir = 'D:/Projects/EchoPreview.mdb/scripts'\nif scriptDir not in sys.path:\n    sys.path.append(scriptDir)\nimport particle_size\nreload(particle_size)\nparticle_size.main()" 
+        -enableBackground 0
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "import sys\nscriptDir = 'D:/Projects/EchoPreview.mdb/scripts'\nif ..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "psize" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import sys\nscriptDir = 'D:/Projects/EchoPreview.mdb/scripts'\nif scriptDir not in sys.path:\n    sys.path.append(scriptDir)\nimport particle_size\nreload(particle_size)\nparticle_size.getParticleSize((1, 2, 3))" 
         -sourceType "python" 
         -commandRepeatable 1
         -flat 1

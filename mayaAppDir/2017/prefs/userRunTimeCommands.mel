@@ -1,0 +1,180 @@
+//Maya Preference 2017 (Release 1)
+//
+//
+
+runTimeCommand
+	-annotation "Open FX Outliner"
+	-category "Custom Scripts"
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from fxpt.fx_outliner import fx_outliner\nfx_outliner.run()")
+	FXOutliner;
+
+runTimeCommand
+	-annotation "Wireframe on Shaded in current view"
+	-category "Custom Scripts"
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("toggleShadeOptionsWireOnShaded")
+	ToggleShadeOptionsWireOnShaded;
+
+runTimeCommand
+	-annotation "X-Ray in current view"
+	-category "Custom Scripts"
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("toggleShadeOptionsXray")
+	ToggleShadeOptionsXray;
+
+runTimeCommand
+	-annotation "Move UVs one unit up"
+	-category "Custom Scripts"
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("fix_unitUVMove(\"up\", 1.0)")
+	UVMoveUnitUp;
+
+runTimeCommand
+	-annotation "Move UVs one unit down"
+	-category "Custom Scripts"
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("fix_unitUVMove(\"down\", 1.0)")
+	UVMoveUnitDown;
+
+runTimeCommand
+	-annotation "Move UVs one unit left"
+	-category "Custom Scripts"
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("fix_unitUVMove(\"left\", 1.0)")
+	UVMoveUnitLeft;
+
+runTimeCommand
+	-annotation "Move UVs one unit right"
+	-category "Custom Scripts"
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("fix_unitUVMove(\"right\", 1.0)")
+	UVMoveUnitRight;
+
+runTimeCommand
+	-annotation "Selection mask to edges"
+	-category "Custom Scripts"
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("changeSelectMode -component; \nsetComponentPickMask \"All\" 0;\nsetComponentPickMask \"Line\" true;\n")
+	SelectionMaskEdge;
+
+runTimeCommand
+	-annotation "Selection mask to faces"
+	-category "Custom Scripts"
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("changeSelectMode -component; \nsetComponentPickMask \"All\" 0;\nsetComponentPickMask \"Facet\" true;\n")
+	SelectionMaskFace;
+
+runTimeCommand
+	-annotation "Selection mask to hulls"
+	-category "Custom Scripts"
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("changeSelectMode -component; \nsetComponentPickMask \"All\" 0;\nsetComponentPickMask \"Hull\" true;")
+	SelectionMaskHull;
+
+runTimeCommand
+	-annotation "Selection mask to points"
+	-category "Custom Scripts"
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("changeSelectMode -component; \nsetComponentPickMask \"All\" 0;\nsetComponentPickMask \"Point\" true;")
+	SelectionMaskPoints;
+
+runTimeCommand
+	-annotation "Selection mask to UVs"
+	-category "Custom Scripts"
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("changeSelectMode -component; \nsetComponentPickMask \"All\" 0;\nsetComponentPickMask \"ParmPoint\" true;\n")
+	SelectionMaskUV;
+
+runTimeCommand
+	-annotation "Paste UVs from clipboard"
+	-category "Custom Scripts"
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from fxpt.fx_utils import fx_poly_copy_paste\nfx_poly_copy_paste.paste(shader=False, uv=True, color=False)")
+	PCPpasteUV;
+
+runTimeCommand
+	-annotation "Copy shader uv and color from polygon to clipboard"
+	-category "Custom Scripts"
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from fxpt.fx_utils import fx_poly_copy_paste\nfx_poly_copy_paste.copy()")
+	PCPcopy;
+
+runTimeCommand
+	-annotation "Paste shader from clipboard"
+	-category "Custom Scripts"
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from fxpt.fx_utils import fx_poly_copy_paste\nfx_poly_copy_paste.paste(shader=True, uv=False, color=False)")
+	PCPpasteShader;
+
+runTimeCommand
+	-annotation "PolyModelingMain (Press)"
+	-category "Other items.User Marking Menus"
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("if (`popupMenu -exists tempMM`) { deleteUI tempMM; }\npopupMenu -button 1 -ctl false -alt false -sh false -allowOptionBoxes true -parent `findPanelPopupParent` -mm 1 tempMM; \nsource \"menu_PolyModelingMain\";\n")
+	PolyModelingMain_Press;
+
+runTimeCommand
+	-annotation "PolyModelingMain (Release)"
+	-category "Other items.User Marking Menus"
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("if (`popupMenu -exists tempMM`) { deleteUI tempMM; }")
+	PolyModelingMain_Release;
+
+runTimeCommand
+	-annotation "PolyConversion (Press)"
+	-category "Other items.User Marking Menus"
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("if (`popupMenu -exists tempMM`) { deleteUI tempMM; }\npopupMenu -button 1 -ctl false -alt false -sh false -allowOptionBoxes true -parent `findPanelPopupParent` -mm 1 tempMM; \nsource \"menu_PolyConversion\";\n")
+	PolyConversion_Press;
+
+runTimeCommand
+	-annotation "PolyConversion (Release)"
+	-category "Other items.User Marking Menus"
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("if (`popupMenu -exists tempMM`) { deleteUI tempMM; }")
+	PolyConversion_Release;
+
+runTimeCommand
+	-annotation "PolyMisc (Press)"
+	-category "Other items.User Marking Menus"
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("if (`popupMenu -exists tempMM`) { deleteUI tempMM; }\npopupMenu -button 1 -ctl false -alt false -sh false -allowOptionBoxes true -parent `findPanelPopupParent` -mm 1 tempMM; \nsource \"menu_PolyMisc\";\n")
+	PolyMisc_Press;
+
+runTimeCommand
+	-annotation "PolyMisc (Release)"
+	-category "Other items.User Marking Menus"
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("if (`popupMenu -exists tempMM`) { deleteUI tempMM; }")
+	PolyMisc_Release;
+
+runTimeCommand
+	-annotation "Show Spark"
+	-category "Custom Scripts"
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from fxpt.fx_spark import fx_spark\nfx_spark.run()")
+	Spark;
+
