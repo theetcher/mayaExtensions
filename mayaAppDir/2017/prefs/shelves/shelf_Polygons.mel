@@ -355,8 +355,8 @@ global proc shelf_Polygons () {
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -command "performPolyChipOff 0 0" 
-        -sourceType "mel" 
+        -command "from fxpt.fx_utils import fx_duplicate_extract\nfx_duplicate_extract.run(deleteOriginals=True)" 
+        -sourceType "python" 
         -doubleClickCommand "ExtractFaceOptions" 
         -commandRepeatable 1
         -flat 1
@@ -387,8 +387,8 @@ global proc shelf_Polygons () {
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -command "performPolyChipOff 0 1" 
-        -sourceType "mel" 
+        -command "from fxpt.fx_utils import fx_duplicate_extract\nfx_duplicate_extract.run(deleteOriginals=False)" 
+        -sourceType "python" 
         -doubleClickCommand "DuplicateFaceOptions" 
         -commandRepeatable 1
         -flat 1
