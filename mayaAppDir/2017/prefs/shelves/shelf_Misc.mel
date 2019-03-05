@@ -171,6 +171,7 @@ global proc shelf_Misc () {
         -mi "Number of Selected Nodes" ( "print(size(`selectedNodes`)+\" node(s) selected\\n\");" )
         -mi "Randomize Points" ( "source rndPoints;\nrndPoints;" )
         -mi "Select Objects of Same Type" ( "source fix_selectSameType;\nfix_selectSameType();" )
+        -mi "Toggle Click Drag Select" ( "selectPref -clickDrag (!`selectPref -q -clickDrag`);\nwarning -noContext (\"Click Drag Select: \" + ((`selectPref -q -clickDrag`) ? \"ON\" : \"OFF\"))\n" )
         -mi "Untemplate All" ( "toggle -te -gl -st 0;" )
         -mi "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" ( "" )
         -mi "Replace Objects with Instances" ( "source fix_replaceWithInstances;\nfix_replaceWithInstances;" )
