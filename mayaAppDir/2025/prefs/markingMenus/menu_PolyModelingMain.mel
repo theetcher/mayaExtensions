@@ -5,13 +5,10 @@
         -subMenu 0
         -tearOff 0
         -command "dR_multiCutTool" 
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 0
+        -header 0
         -enable 1
+        -visible 1
         -data 0
         -radialPosition "N" 
         -allowOptionBoxes 1
@@ -31,13 +28,10 @@
         -subMenu 0
         -tearOff 0
         -command "dR_multiCutTool; toolPropertyWindow;" 
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 1
+        -header 0
         -enable 1
+        -visible 0
         -data 0
         -allowOptionBoxes 1
         -postMenuCommandOnce 0
@@ -55,13 +49,10 @@
         -subMenu 0
         -tearOff 0
         -command "polySplitRing" 
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 0
+        -header 0
         -enable 1
+        -visible 1
         -data 0
         -radialPosition "S" 
         -allowOptionBoxes 1
@@ -80,13 +71,10 @@
         -divider 0
         -subMenu 1
         -tearOff 0
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 0
+        -header 0
         -enable 1
+        -visible 1
         -data 0
         -radialPosition "W" 
         -allowOptionBoxes 1
@@ -103,13 +91,10 @@
             -subMenu 0
             -tearOff 0
             -command "MergeToCenter" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
             -optionBox 0
+            -header 0
             -enable 1
+            -visible 1
             -data 0
             -radialPosition "N" 
             -allowOptionBoxes 1
@@ -129,13 +114,10 @@
             -subMenu 0
             -tearOff 0
             -command "performPolyMerge 0" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
             -optionBox 0
+            -header 0
             -enable 1
+            -visible 1
             -data 0
             -radialPosition "S" 
             -allowOptionBoxes 1
@@ -155,13 +137,10 @@
             -subMenu 0
             -tearOff 0
             -command "PolyMergeOptions" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
             -optionBox 1
+            -header 0
             -enable 1
+            -visible 0
             -data 0
             -allowOptionBoxes 1
             -postMenuCommandOnce 0
@@ -180,13 +159,10 @@
         -divider 0
         -subMenu 1
         -tearOff 0
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 0
+        -header 0
         -enable 1
+        -visible 1
         -data 0
         -radialPosition "E" 
         -allowOptionBoxes 1
@@ -202,14 +178,11 @@
             -divider 0
             -subMenu 0
             -tearOff 0
-            -command "python(\"from fxpt.fx_utils import fx_combine; fx_combine.fxCombine(merge=True)\")" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
+            -command "from fxpt3.fx_utils import fx_combine\nfx_combine.fxCombine(merge=True)" 
             -optionBox 0
+            -header 0
             -enable 1
+            -visible 1
             -data 0
             -radialPosition "N" 
             -allowOptionBoxes 1
@@ -219,7 +192,7 @@
             -echoCommand 0
             -italicized 0
             -boldFont 1
-            -sourceType "mel" 
+            -sourceType "python" 
             -longDivider 1
             menuEditorMenuItem1;
 
@@ -228,13 +201,10 @@
             -divider 0
             -subMenu 0
             -tearOff 0
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
             -optionBox 1
+            -header 0
             -enable 1
+            -visible 0
             -data 0
             -allowOptionBoxes 1
             -postMenuCommandOnce 0
@@ -250,14 +220,11 @@
             -divider 0
             -subMenu 0
             -tearOff 0
-            -command "python(\"from fxpt.fx_utils import fx_combine; fx_combine.fxCombine()\")" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
+            -command "print('NEW MARKING MENU')\nfrom fxpt3.fx_utils import fx_combine\nfx_combine.fxCombine()" 
             -optionBox 0
+            -header 0
             -enable 1
+            -visible 1
             -data 0
             -radialPosition "S" 
             -allowOptionBoxes 1
@@ -267,7 +234,7 @@
             -echoCommand 0
             -italicized 0
             -boldFont 1
-            -sourceType "mel" 
+            -sourceType "python" 
             -longDivider 1
             menuEditorMenuItem3;
 
@@ -276,17 +243,15 @@
             -divider 0
             -subMenu 0
             -tearOff 0
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
             -optionBox 1
+            -header 0
             -enable 1
+            -visible 0
             -data 0
             -allowOptionBoxes 1
             -postMenuCommandOnce 0
             -enableCommandRepeat 0
+            -echoCommand 0
             -italicized 0
             -boldFont 1
             -sourceType "mel" 
@@ -301,13 +266,10 @@
         -subMenu 0
         -tearOff 0
         -command "Delete" 
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 0
+        -header 0
         -enable 1
+        -visible 1
         -data 0
         -radialPosition "NE" 
         -allowOptionBoxes 1
@@ -327,13 +289,10 @@
         -subMenu 0
         -tearOff 0
         -command "DeletePolyElements" 
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 0
+        -header 0
         -enable 1
+        -visible 1
         -data 0
         -radialPosition "NW" 
         -allowOptionBoxes 1
@@ -353,13 +312,10 @@
         -subMenu 0
         -tearOff 0
         -command "performPolyCollapse 0" 
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 0
+        -header 0
         -enable 1
+        -visible 1
         -data 0
         -radialPosition "SE" 
         -allowOptionBoxes 1
@@ -379,13 +335,10 @@
         -subMenu 0
         -tearOff 0
         -command "PolySpinEdgeForward" 
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 0
+        -header 0
         -enable 1
+        -visible 1
         -data 0
         -radialPosition "SW" 
         -allowOptionBoxes 1
@@ -405,13 +358,10 @@
         -subMenu 0
         -tearOff 0
         -command "CustomPolygonDisplayOptions" 
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 0
+        -header 0
         -enable 1
+        -visible 1
         -data 0
         -allowOptionBoxes 1
         -postMenuCommandOnce 0
@@ -430,13 +380,10 @@
         -subMenu 0
         -tearOff 0
         -command "polyOptions -sb 4;\r\npolyOptions -r -displayBorder true;\r\n\r\n\r\n" 
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 0
+        -header 0
         -enable 1
+        -visible 1
         -data 0
         -allowOptionBoxes 1
         -postMenuCommandOnce 0
@@ -455,13 +402,10 @@
         -dividerLabel "separator" 
         -subMenu 0
         -tearOff 0
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 0
+        -header 0
         -enable 1
+        -visible 1
         -data 0
         -allowOptionBoxes 1
         -postMenuCommandOnce 0
@@ -478,13 +422,10 @@
         -subMenu 0
         -tearOff 0
         -command "setToolTo polyAppendFacetContext ; polyAppendFacetCtx -e -pc `optionVar -q polyKeepFacetsPlanar` polyAppendFacetContext" 
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 0
+        -header 0
         -enable 1
+        -visible 1
         -data 0
         -allowOptionBoxes 1
         -postMenuCommandOnce 0
@@ -503,13 +444,10 @@
         -subMenu 0
         -tearOff 0
         -command "setToolTo polyAppendFacetContext ; polyAppendFacetCtx -e -pc `optionVar -q polyKeepFacetsPlanar` polyAppendFacetContext; toolPropertyWindow" 
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 1
+        -header 0
         -enable 1
+        -visible 0
         -data 0
         -allowOptionBoxes 1
         -postMenuCommandOnce 0
@@ -519,7 +457,7 @@
         -boldFont 1
         -sourceType "mel" 
         -longDivider 1
-        menuEditorMenuItem12;
+        menuEditorMenuItem27;
 
     menuItem
         -label "Extrude" 
@@ -527,13 +465,10 @@
         -subMenu 0
         -tearOff 0
         -command "performPolyExtrude 0" 
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 0
+        -header 0
         -enable 1
+        -visible 1
         -data 0
         -allowOptionBoxes 1
         -postMenuCommandOnce 0
@@ -552,13 +487,10 @@
         -subMenu 0
         -tearOff 0
         -command "PolyExtrudeOptions" 
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 1
+        -header 0
         -enable 1
+        -visible 0
         -data 0
         -allowOptionBoxes 1
         -postMenuCommandOnce 0
@@ -568,7 +500,7 @@
         -boldFont 1
         -sourceType "mel" 
         -longDivider 1
-        menuEditorMenuItem14;
+        menuEditorMenuItem28;
 
     menuItem
         -label "Slide Edge" 
@@ -576,13 +508,10 @@
         -subMenu 0
         -tearOff 0
         -command "SlideEdgeTool" 
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 0
+        -header 0
         -enable 1
+        -visible 1
         -data 0
         -allowOptionBoxes 1
         -postMenuCommandOnce 0
@@ -601,13 +530,10 @@
         -subMenu 0
         -tearOff 0
         -command "SlideEdgeToolOptions" 
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 1
+        -header 0
         -enable 1
+        -visible 0
         -data 0
         -allowOptionBoxes 1
         -postMenuCommandOnce 0
@@ -617,7 +543,7 @@
         -boldFont 1
         -sourceType "mel" 
         -longDivider 1
-        menuEditorMenuItem16;
+        menuEditorMenuItem29;
 
     menuItem
         -label "Edit Edge Flow" 
@@ -625,13 +551,10 @@
         -subMenu 0
         -tearOff 0
         -command "polyEditEdgeFlow -constructionHistory 1 -adjustEdgeFlow 1" 
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 0
+        -header 0
         -enable 1
+        -visible 1
         -data 0
         -allowOptionBoxes 1
         -postMenuCommandOnce 0
@@ -650,13 +573,10 @@
         -subMenu 0
         -tearOff 0
         -command "PolyEditEdgeFlowOptions" 
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 1
+        -header 0
         -enable 1
+        -visible 0
         -data 0
         -allowOptionBoxes 1
         -postMenuCommandOnce 0
@@ -666,7 +586,7 @@
         -boldFont 1
         -sourceType "mel" 
         -longDivider 1
-        menuEditorMenuItem24;
+        menuEditorMenuItem30;
 
     menuItem
         -label "separator" 
@@ -674,13 +594,10 @@
         -dividerLabel "separator" 
         -subMenu 0
         -tearOff 0
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 0
+        -header 0
         -enable 1
+        -visible 1
         -data 0
         -allowOptionBoxes 1
         -postMenuCommandOnce 0
@@ -697,13 +614,10 @@
         -subMenu 0
         -tearOff 0
         -command "ReversePolygonNormals" 
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 0
+        -header 0
         -enable 1
+        -visible 1
         -data 0
         -allowOptionBoxes 1
         -postMenuCommandOnce 0
@@ -722,13 +636,10 @@
         -subMenu 0
         -tearOff 0
         -command "ReversePolygonNormalsOptions" 
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 1
+        -header 0
         -enable 1
+        -visible 0
         -data 0
         -allowOptionBoxes 1
         -postMenuCommandOnce 0
@@ -738,7 +649,7 @@
         -boldFont 1
         -sourceType "mel" 
         -longDivider 1
-        menuEditorMenuItem26;
+        menuEditorMenuItem31;
 
     menuItem
         -label "Harden Edge" 
@@ -746,13 +657,10 @@
         -subMenu 0
         -tearOff 0
         -command "SoftPolyEdgeElements 0" 
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 0
+        -header 0
         -enable 1
+        -visible 1
         -data 0
         -allowOptionBoxes 1
         -postMenuCommandOnce 0
@@ -771,13 +679,10 @@
         -subMenu 0
         -tearOff 0
         -command "SoftPolyEdgeElements 1" 
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 0
+        -header 0
         -enable 1
+        -visible 1
         -data 0
         -allowOptionBoxes 1
         -postMenuCommandOnce 0
@@ -796,13 +701,10 @@
         -subMenu 0
         -tearOff 0
         -command "polyNormalPerVertex -ufn true" 
-        -altModifier 0
-        -optionModifier 0
-        -commandModifier 0
-        -ctrlModifier 0
-        -shiftModifier 0
         -optionBox 0
+        -header 0
         -enable 1
+        -visible 1
         -data 0
         -allowOptionBoxes 1
         -postMenuCommandOnce 0

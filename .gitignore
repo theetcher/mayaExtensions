@@ -67,6 +67,7 @@ $RECYCLE.BIN/
 # =========================
 *_filerules.txt
 *.deleted
+*.log
 filePathEditorRegistryPrefs.mel
 mainWindowStates/
 Maya_Classic.json
@@ -84,6 +85,7 @@ pluginPrefs.mel
 presets/
 projects/
 renderNodeTypeFavorites
+RSTemplates/
 scriptEditorTemp/
 shelf_XGen.mel
 synColor/
@@ -91,8 +93,9 @@ synColorConfig.xml
 synColorConfig.xml.lock
 synColorFileRules.xml
 user.toolclips/
+userPrefs_recents.mel
 userPrefs.mel
 userRGBColors2.mel
 windowPrefs.mel
-RSTemplates/
-*.log
+workspaces/
+userColors.mel
