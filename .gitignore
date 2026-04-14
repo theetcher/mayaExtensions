@@ -93,9 +93,10 @@ synColorConfig.xml
 synColorConfig.xml.lock
 synColorFileRules.xml
 user.toolclips/
+userColors.mel
+userPrefs_panelConfig.mel
 userPrefs_recents.mel
 userPrefs.mel
 userRGBColors2.mel
 windowPrefs.mel
 workspaces/
-userColors.mel
